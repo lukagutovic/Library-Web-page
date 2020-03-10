@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  max-width: 100%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  background-color: #ffdb0d;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  text-decoration: underline;
+}
+@media only screen and (max-width: 650px) {
+  .header-container {
+    width: 100%;
+    padding-left: 5px;
+  }
+}
+
+nav {
+  display: flex;
+  padding-top: 10px;
+  max-width: 100%;
+}
+@media only screen and (max-width: 1200px) {
+  nav {
+    flex-direction: column;
+  }
+}
+
+.logo {
+  width: 29%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.logo img {
+  width: 160px;
+  height: 140px;
+}
+@media only screen and (max-width: 1200px) {
+  .logo {
+    justify-content: flex-start;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .logo {
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .logo img {
+    width: 120px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .logo {
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.title {
+  font-size: 27px;
+  font-weight: 800;
+  font-family: "Roboto", sans-serif;
+  padding-left: 20px;
+  letter-spacing: 1px;
+  width: 60%;
+}
+@media only screen and (max-width: 650px) {
+  .title {
+    font-size: 25px;
+  }
+}
+
+.nav-container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 100px;
+  width: 70%;
+}
+@media only screen and (max-width: 1200px) {
+  .nav-container {
+    width: 100%;
+    margin-right: 0px;
+    justify-content: flex-start;
+  }
+}
+
+.information {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.information a {
+  font-size: 18px;
+  padding-top: 12px;
+  margin: 0px auto;
+  color: #504c4c;
+  font-weight: 600;
+  height: 40px;
+  border: none;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+  .information {
+    width: 100%;
+    justify-content: flex-start;
+    padding-right: 30px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .information {
+    flex-wrap: wrap;
+    padding-left: 20px;
+  }
+}
+
+.language {
+  width: 75px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 7px;
+  margin-left: 60px;
+  margin-top: 5px;
+  padding-left: 10px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.category {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30px;
+  cursor: pointer;
+}
+.category a {
+  font-size: 19px;
+  padding-left: 50px;
+  text-decoration: none;
+  color: #504c4c;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1024px) {
+  .category a {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .category {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .category {
+    flex-wrap: wrap;
+  }
+}
+
+.search-container {
+  background-color: #363535;
+  display: flex;
+  max-width: 100%;
+  padding-top: 20px;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  justify-content: flex-start;
+}
+@media only screen and (max-width: 1200px) {
+  .search-container {
+    flex-wrap: wrap;
+  }
+}
+
+.book-name {
+  width: 80%;
+  background-color: #363535;
+  margin-left: 60px;
+}
+.book-name input {
+  height: 50px;
+  width: 83%;
+  border-radius: 12px;
+  border-bottom-right-radius: unset;
+  border-top-right-radius: unset;
+  padding-top: 10px;
+}
+.book-name ::placeholder {
+  padding-left: 30px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+@media only screen and (max-width: 650px) {
+  .book-name {
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .book-name ::placeholder {
+    font-size: 12px;
+  }
+  .book-name input {
+    width: 50%;
+  }
+}
+
+.category-books {
+  width: 15%;
+  position: absolute;
+  height: 64px;
+  margin-top: 1px;
+  border-radius: 12px;
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+  font-size: 25px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+@media only screen and (max-width: 650px) {
+  .category-books {
+    width: 30%;
+    font-size: 15px;
+  }
+}
+
+.search-category button {
+  height: 65px;
+  width: 220px;
+  margin-left: 50px;
+  background-color: #f35151;
+  border-radius: 15px;
+  border: 1px solid #f35151;
+  color: white;
+  font-size: 19px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+  .search-category button {
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .search-category button {
+    margin: 10px;
+  }
+}
+.search-category button :active {
+  border: none;
+}
+
+main {
+  max-width: 100%;
+}
+
+section {
+  display: flex;
+  margin-left: 60px;
+  margin-top: 70px;
+  position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  section {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.new-activities {
+  width: 69%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 650px) {
+  .new-activities {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .new-activities {
+    width: 100%;
+  }
+}
+
+.activities {
+  width: 30%;
+  background-color: #1091db;
+  margin-bottom: 50px;
+  position: absolute;
+  right: 70px;
+  top: 5px;
+  z-index: 1;
+}
+.activities img {
+  width: 100%;
+  height: 470px;
+  opacity: 0.3;
+}
+@media only screen and (max-width: 650px) {
+  .activities {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .activities {
+    position: unset;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .activities img {
+    width: 100%;
+    margin-top: 20px;
+    opacity: 0.4;
+  }
+}
+
+.first-activities {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-activities h1 {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+.first-activities h2 {
+  padding-left: 30px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: serif;
+  color: #5e5b5b;
+  margin-right: 100px;
+}
+.first-activities h2 hr {
+  height: 5px;
+  background-color: #f35151;
+}
+@media only screen and (max-width: 450px) {
+  .first-activities {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .first-activities h2 {
+    margin-left: 5px;
+    padding-left: 0px;
+  }
+}
+
+.new-promotion {
+  width: 100%;
+  background-color: #f3ebf3;
+  z-index: 1;
+  padding-left: 50px;
+}
+.new-promotion h3 {
+  font-size: 35px;
+}
+.new-promotion h4 {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  width: 60%;
+}
+.new-promotion p {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+@media only screen and (max-width: 1024px) {
+  .new-promotion {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .new-promotion h4 {
+    width: 100%;
+  }
+}
+
+.slideshow {
+  width: 90%;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.more-information button {
+  display: inline-flex;
+  justify-content: space-evenly;
+  height: 55px;
+  width: 200px;
+  margin-left: 50px;
+  background-color: #f35151;
+  border-radius: 15px;
+  border: 1px solid #f35151;
+  color: white;
+  font-size: 19px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
