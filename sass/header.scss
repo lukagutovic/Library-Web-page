@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    min-width: 400px;
 }
 header {
     max-width: 100%;
@@ -26,7 +27,8 @@ header {
     text-decoration: underline;
         @media only screen and (max-width: 650px) {
             width: 100%;
-            padding-left: 5px;
+            padding: 0;
+            margin: 0;
         }
       
 }
@@ -96,8 +98,8 @@ nav {
             justify-content: flex-start;
          }      
 }
-.information {
-    width: 50%;
+.information-nav {
+    width: 60%;
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
@@ -113,14 +115,17 @@ nav {
             font-family: 'Open Sans', sans-serif;
             cursor: pointer;
         }
-        @media only screen and (max-width: 1200px) {
-            width: 100%;
+        @media only screen and (max-width: 1024px) {
+            width: 50%;
             justify-content: flex-start;
             padding-right: 30px;
          } 
+         @media only screen and (max-width: 950px) {
+            width: 80%;
+         } 
          @media only screen and (max-width: 650px) {
             flex-wrap: wrap;
-            padding-left: 20px;
+            width: 90%;
           }
       
 }
@@ -163,7 +168,7 @@ nav {
          }  
 }
 .search-container {
-    background-color:rgb(54, 53, 53);
+    background-color:#2a3743;
     display: flex;
     max-width: 100%;
     padding-top: 20px;
@@ -180,11 +185,16 @@ nav {
     margin-left: 60px;
         input {
             height: 50px;
-            width: 83%;
+            width: 80%;
             border-radius: 12px;
             border-bottom-right-radius: unset;
             border-top-right-radius: unset;
             padding-top: 10px;
+                @media only screen and (max-width: 650px) {
+                    width: 65%;
+                    border-radius: 12px;
+                    margin-right: 10px;
+                }
         }
         ::placeholder {
             padding-left: 30px;
@@ -194,8 +204,10 @@ nav {
         @media only screen and (max-width: 650px) {
             flex-direction: column;
             margin-left: 10px; 
+            width: 100%;
                 ::placeholder {
                     font-size: 12px;
+                    width: 45%;
                 }
                 input {
                     width: 50%;
@@ -217,12 +229,21 @@ nav {
         @media only screen and (max-width: 650px) {
             width: 30%;
             font-size: 15px;
+            border-radius: 12px;
+            font-size: 18px;
+            padding-left: 2px;
+        } 
+        @media only screen and (max-width: 1024px) {
+            width: 20%;
+            font-size: 18px;
+            padding-left: 2px;
         } 
 }
 .search-category button {  
     height: 65px;
     width: 220px;
-    margin-left: 50px;
+    margin-left: 30px;
+    margin-right: 70px;
     background-color: #ea545b;
     border-radius: 15px;
     border: 1px solid  #ea545b ;

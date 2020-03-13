@@ -1,5 +1,6 @@
 main {
     max-width: 100%;
+    margin-right: 30px;
 }
 section {
     display: flex;
@@ -30,16 +31,21 @@ section {
     background-color: #32788d;
     margin-bottom: 50px;
     position: absolute;
-    right: 70px;
-    top: 5px;
+    right: 65px;
+    top: 10px;
     z-index: 1;
         img {
             width: 100%;
             height: 470px;
             opacity: 0.2;      
         }
-        @media only screen and (max-width: 650px) {
+        @media only screen and (max-width: 1500px) {
+            right: 30px;
+            top: 20px;
+         }
+         @media only screen and (max-width: 650px) {
             width: 100%;
+            padding-left: 20px;
          }
          @media only screen and (max-width: 1024px) {
             position: unset;
@@ -76,12 +82,26 @@ section {
                     background-color: #ea545b;
                 }
         }
-        @media only screen and (max-width: 450px) {
+        @media only screen and (max-width: 650px) {
             flex-direction: column; 
             align-items: baseline; 
                 h2 {
                     margin-left: 5px;
-                    padding-left: 0px;
+                    padding-left: 20px;
+                }
+                h1 {
+                    font-size: 25px;
+                    padding-left: 20px;
+                }    
+          }
+          @media only screen and (max-width: 1024px) { 
+                h2 {
+                    margin-left: 5px;
+                    padding-left: 20px;
+                }
+                h1 {
+                    font-size: 25px;
+                    padding-left: 20px;
                 }    
           }
 }
@@ -108,12 +128,24 @@ section {
             width: 100%;
             margin: 0;
             padding: 0;
-            padding-left: 20px;
-          }
-         @media only screen and (max-width: 450px) { 
                 h4 {
-                    width: 100%;
-            }    
+                    padding-left: 20px;
+                }
+                h3 {
+                    padding-left: 20px;
+                }
+          }
+         @media only screen and (max-width: 650px) { 
+             width: 100%;
+             padding-left: 25px;
+                h4 {
+                    width: 90%;
+                    margin: 0;
+                    padding-left: 20px;
+                } 
+                h3 {
+                    padding-left: 20px;
+                }   
         }
 }
 .slideshow {
@@ -129,6 +161,7 @@ section {
     height: 55px;
     width: 200px;
     margin-left: 50px;
+    margin-right: 50px;
     background-color: #ea545b;
     border-radius: 15px;
     border: 1px solid  #ea545b ;
@@ -136,4 +169,73 @@ section {
     font-size: 19px;
     letter-spacing: 1px;
     cursor: pointer;
+}
+.images-description {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    padding-left: 50px;
+        h1 {
+            color: white;
+            font-size: 19px;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 1px;
+            width: 90%;
+        }
+        h2 {
+            color: white;
+            font-size: 30px;
+            font-family: 'Merriweather Sans', sans-serif;
+            font-weight: 400;
+            margin-top: 0px;
+            width: 90%;
+        }
+        hr {
+            width: 25%;
+            height: 6px;
+            background-color: white;
+            margin-left: 0;
+        }
+        h3 {
+            color: white;
+            font-size: 18px;
+            font-family: 'Merriweather Sans', sans-serif;
+            font-weight: 400;
+            margin-top: 0px;
+            letter-spacing: 1px;
+            width: 90%;
+        }
+                @media only screen and (max-width: 1024px) {
+                    width: 100%;
+                    top: 650px;
+                    position: absolute;
+                    padding-left: 0px;
+                        h1 {
+                            padding-left: 20px;
+                        }
+                        h2 {
+                            padding-left: 20px;
+                        }
+                        h3 {
+                            padding-left: 20px;
+                        }
+                }
+                @media only screen and (max-width: 650px) {
+                        padding-top: 120px;
+                    h1 {
+                        padding-left: 20px;
+                    }
+                    h2 {
+                            padding-left: 20px;
+                    }
+                    h3 {
+                            padding-left: 20px;
+                    }
+                }
+                @media only screen and (max-width: 350px) {
+                    padding-top: 300px;
+                }
 }
