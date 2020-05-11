@@ -1,199 +1,253 @@
-// section {
-//     min-width: 100%;
-//     padding: 70px;
-// }
 .next-activities {
-    width: 69%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    position: relative;
-        @media only screen and (max-width: 650px) {
-            width: 100%;
-        }
-        @media only screen and (max-width: 1024px) {
-            width: 100%;
-        }
+  @include nextActivities;
+  @include responsive(tab-md-land) {
+    width: 100%;
+  }
+  @include responsive(phone) {
+    width: 100%;
+  }
 }
-.description-next {
-    width: 90%;
-    margin: 30px;
-    display: flex;
+.promotion-description {
+  @include promotionDescription;
+}
+.first-activities {
+  @include firstActivities;
+  @include responsive(phone) {
     flex-direction: column;
-    background-color: #45a2c6;
-    border: 2px solid #71d1f7;
-    padding-left: 50px;
-    padding-top: 40px;
-        h1 {
-            font-size: 40px;
-            width: 70%;
-            color: white;
-            font-family: 'Merriweather Sans', sans-serif;
-            font-weight: 400;
-            letter-spacing: 2px;
-                @media only screen and (max-width: 10240px) {
-                    width: 100%;
-                    font-size: 25px;
-                }
-        }
-        h2 {
-            color: white;
-            padding: 0px;
-            margin: 0;
-        }
-        p {
-            color: white;
-            padding: 0;
-            margin: 0;
-            font-size: 50px;
-            font-family: 'Merriweather Sans', sans-serif;
-        }
-        h3 {
-            font-size: 25px;
-            width: 55%;
-            color: white;
-            font-family: 'Merriweather Sans', sans-serif;
-            font-weight: 400;
-            letter-spacing: 2px;
-                @media only screen and (max-width: 1024px) {
-                    width: 100%;
-                    font-size: 18px;
-                }
-        }
-        @media only screen and (max-width: 1024px) {
-            margin: 30px;
-            width: 100%;
-         }
-         @media only screen and (max-width: 650px) {
-            width: 100%;
-         }
+    align-items: baseline;
+    h2 {
+      margin-left: 5px;
+      padding-left: 20px;
+    }
+    h1 {
+      font-size: 25px;
+      padding-left: 20px;
+    }
+  }
+  @include responsive(laptop) {
+    h2 {
+      margin-left: 5px;
+      padding-left: 20px;
+    }
+    h1 {
+      font-size: 25px;
+      padding-left: 20px;
+    }
+  }
 }
 .next-promotion {
-    width: 80%;
-    background-color: #45a2c6;
-    z-index: 1;
-    padding: 30px;
-    // position: relative;
-    display: flex;
-        @media only screen and (max-width: 1024px) {
-            width: 100%;
-            padding: 0;
-        }
-        @media only screen and (max-width: 650px) {
-            width: 100%;
-            padding-left: 20px;
-        }
+  @include newPromotion;
+  @include responsive(desktop-lg) {
+    height: 750px;
+  }
+  @include responsive(laptop) {
+    width: 100%;
+    padding: 0;
+    font-size: 1rem;
+  }
+  @include responsive(phone) {
+    width: 100%;
+    padding-left: 20px;
+  }
+  @include responsive(phone-s-m-l-sizes) {
+    height: 550px;
+  }
+  @include responsive(phone-l-plus-sizes) {
+    height: 550px;
+  }
 }
-.more-information-next button {
-    display: inline-flex;
-    justify-content: space-evenly;
-    height: 55px;
-    width: 200px;
-    background-color: #45a2c6;
-    border-radius: 12px;
-    border: 3px solid  white ;
-    color: white;
-    font-size: 19px;
-    letter-spacing: 1px;
-    margin-top: 20px;
-    cursor: pointer;
+.button-wrapper button {
+  @include buttonWrapper;
 }
 .membership-information {
-    border-left: 3px solid rgb(250, 247, 247);
-    width: 34%;
-    padding-left: 80px;
-            p {
-                font-size: 40px;
-                font-weight: 500;
-                font-family: 'Roboto', sans-serif;
-                letter-spacing: 1px;
-            }
-            ul li span {
-                font-size: 25px;
-                font-family: 'Merriweather Sans', sans-serif;
-                color: black;  
-                    @media only screen and (max-width: 1024px) {
-                        font-size: 18px;
-                    }
-                    @media only screen and (max-width: 650px) {
-                        width: 100%;
-                        margin: 0;
-                        padding: 0;
-                        font-size: 15px;
-                    }
-            }
-            ul li {
-                color: red;
-                padding-bottom: 20px;
-            }
-            ul {
-                width: 70%;
-            }
-            h2 {
-                // padding-left: 30px;
-                font-size: 18px;
-                letter-spacing: 1px;
-                font-family: serif;
-                color: rgb(94, 91, 91);
-                padding-right: 400px;
-                    @media only screen and (max-width: 650px) {
-                        width: 100%;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    hr {
-                        height: 5px;
-                        background-color: #ea545b;
-                        width: 95%;
-                        @media only screen and (max-width: 650px) {
-                            width: 60%;
-                            margin-left: 0px;
-                         }
-                    }
-            }
-            h1 {
-                font-size: 23px;
-                letter-spacing: 1px;
-                font-family: serif;
-                color: rgb(94, 91, 91);
-                font-family: 'Roboto', sans-serif;
-                font-weight: 400;
-            }
-            @media only screen and (max-width: 650px) {
-                width: 100%;
-                margin: 0;
-                padding: 0;
-                padding-left: 15px;
-                width: 100%;
-            }
-            @media only screen and (max-width: 1024px) {
+  @include membershipInformation;
+  ul li span {
+    font-size: 2.5rem;
+    font-family: "Merriweather Sans", sans-serif;
+    color: black;
+    @include responsive(tab-land-plus) {
+      font-size: 1.6rem;
+    }
+    @include responsive(laptop) {
+      font-size: 1.8rem;
+    }
+    @include responsive(phone) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+    }
+  }
+  ul li {
+    color: red;
+    padding-bottom: 20px;
+  }
+  ul {
+    width: 70%;
+  }
+  h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family: serif;
+    color: rgb(94, 91, 91);
+    padding-right: 400px;
+    @include responsive(phone) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    hr {
+      height: 5px;
+      background-color: #ea545b;
+      width: 95%;
+      @include responsive(phone) {
+        width: 60%;
+        margin-left: 0px;
+      }
+    }
+  }
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-family: serif;
+    color: rgb(94, 91, 91);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
 
-                width: 100%;
-            }
+  @include responsive(laptop) {
+    width: 100%;
+  }
+  @include responsive(phone) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+    width: 100%;
+    margin-top: 300px;
+  }
+  @include responsive(phone-s-m-l-sizes) {
+    margin-top: 300px;
+  }
 }
 .book-cover {
+  @include bookCover;
+  @include responsive(tab-land) {
     width: 40%;
-    height: 40%;
-    position: absolute;
-    z-index: 1;
-    bottom: -40px;
+    height: 350px;
+    left: 500px;
+    top: 350px;
+  }
+  @include responsive(laptop) {
+    width: 40%;
+    height: 30%;
+    left: 350px;
+    top: 550px;
+  }
+  @include responsive(tab-md-land) {
+    width: 40%;
+    height: 250px;
+    left: 450px;
+    top: 300px;
+  }
+  @include responsive(phone) {
+    position: unset;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+  }
+}
+.next {
+  @include arrowNext;
+
+  @include responsive(tab-land) {
+    margin-top: -50px;
+  }
+  @include responsive(tab-md-land) {
+    margin-top: 10px;
+  }
+
+  @include responsive(tab-port) {
+    margin-top: -10px;
+  }
+  @include responsive(phone-middle-sizes) {
+    width: 50px;
+    height: 50px;
+    margin-top: -45px;
+  }
+  @include responsive(phone) {
+    width: 50px;
+    height: 50px;
+    margin-top: -400px;
+  }
+  @include responsive(phone-s-m-l-sizes) {
+    margin-top: -430px;
     right: 60px;
-        img {
-            width: 100%;
-            height: 100%;
-        }
-        @media only screen and (max-width: 1024px) {
-           width: 30%;
-           height: 250px;
-           margin: 0;
-           right: 0;
-           padding: 0;
-           margin-top: 50px;
-        }
-        @media only screen and (max-width: 650px) {
-            position: unset;
-            width: 100%;
-            padding-left: 15px;
-         }
-        
+  }
+}
+a:not([href]) {
+  color: red;
+}
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.slider-controls-images {
+  @include sliderControlsImage;
+  @include responsive(phone-s-m-l-sizes) {
+    margin-top: 400px;
+    margin-right: 50px;
+  }
+  @include responsive(phone-l-plus-sizes) {
+    margin-top: 400px;
+  }
+}
+
+.slider-controls-promotion {
+  @include sliderControlPromotion;
+  @include responsive(tab-md-land) {
+    background-origin: 100px;
+  }
+  @include responsive(phone) {
+    position: absolute;
+    left: 100px;
+    bottom: 10px;
+  }
+  .prev {
+    margin-top: 90px;
+    box-shadow: 0px 10px 10px -10px rgb(58, 57, 57);
+    @include responsive(desktop-lg) {
+      margin-top: -10px;
+    }
+    @include responsive(tab-land-plus) {
+      margin-top: 180px;
+    }
+    @include responsive(phone-l-plus-sizes) {
+      margin-top: -60px;
+    }
+    @include responsive(phone-s-m-l-sizes) {
+      margin-top: -30px;
+    }
+  }
+  .next {
+    margin-top: 90px;
+    margin-right: 40px;
+    box-shadow: 0px 10px 10px -10px rgb(58, 57, 57);
+    @include responsive(desktop-lg) {
+      margin-top: -10px;
+    }
+    @include responsive(tab-land-plus) {
+      margin-top: 180px;
+    }
+    @include responsive(phone-l-plus-sizes) {
+      margin-top: -60px;
+    }
+    @include responsive(phone-s-m-l-sizes) {
+      margin-top: -30px;
+      margin-right: -40px;
+    }
+  }
 }

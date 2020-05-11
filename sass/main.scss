@@ -1,241 +1,166 @@
+@import "_mediaQueries.scss";
+@import "_mixins.scss";
+
 main {
-    max-width: 100%;
-    margin-right: 30px;
+  max-width: 100%;
 }
 section {
-    display: flex;
-    margin-left: 60px;
-    margin-top: 70px; 
-    position: relative;
-        @media only screen and (max-width: 1024px) {
-          flex-direction: column; 
-          width: 100%;
-          margin: 0;
-        }
-}
-.new-activities {
-    width: 69%;
-    display: flex;
+  @include sectionProperties;
+  @include responsive(tab-md-land) {
     flex-direction: column;
-    margin-top: 10px;
-        @media only screen and (max-width: 650px) {
-            flex-wrap: wrap;
-            width: 100%;
-        }
-        @media only screen and (max-width: 1024px) {
-            width: 100%;
-        }
-}
-.activities {
-    width: 30%;
-    background-color: #32788d;
-    margin-bottom: 50px;
-    position: absolute;
-    right: 65px;
-    top: 10px;
-    z-index: 1;
-        img {
-            width: 100%;
-            height: 470px;
-            opacity: 0.2;      
-        }
-        @media only screen and (max-width: 1500px) {
-            right: 30px;
-            top: 20px;
-         }
-         @media only screen and (max-width: 650px) {
-            width: 100%;
-            padding-left: 20px;
-         }
-         @media only screen and (max-width: 1024px) {
-            position: unset;
-            width: 100%;
-            margin-top: 50px;
-                img {
-                    width: 100%;
-                    margin-top: 20px;
-                    opacity: 0.4;
-                }
-          }
-         
-}
-.first-activities {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-        h1 {
-            font-size: 40px;
-            font-weight: 500;
-            font-family: 'Roboto', sans-serif;
-            letter-spacing: 1px;
-        }
-        h2 {
-            padding-left: 30px;
-            font-size: 18px;
-            letter-spacing: 1px;
-            font-family: serif;
-            color: rgb(94, 91, 91);
-            margin-right:100px;
-                hr {
-                    height: 5px;
-                    background-color: #ea545b;
-                }
-        }
-        @media only screen and (max-width: 650px) {
-            flex-direction: column; 
-            align-items: baseline; 
-                h2 {
-                    margin-left: 5px;
-                    padding-left: 20px;
-                }
-                h1 {
-                    font-size: 25px;
-                    padding-left: 20px;
-                }    
-          }
-          @media only screen and (max-width: 1024px) { 
-                h2 {
-                    margin-left: 5px;
-                    padding-left: 20px;
-                }
-                h1 {
-                    font-size: 25px;
-                    padding-left: 20px;
-                }    
-          }
+    margin: 0 auto;
+  }
+}
+.activities-wrapper {
+  @include activitiesWrapper;
+  @include responsive(tab-port) {
+    flex-wrap: wrap;
+  }
+  @include responsive(phone) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+.active {
+  display: block;
+}
+.activities-headline-wrapper {
+  @include activitiesHeadlineWrapper;
+
+  @include responsive(tab-md-land) {
+    h2 {
+      margin-left: 5px;
+      @include paddingLeft;
+    }
+    h1 {
+      font-size: 2.5rem;
+      @include paddingLeft;
+    }
+  }
+  @include responsive(phone) {
+    h1 {
+      font-size: 2.5rem;
+      @include paddingLeft;
+    }
+    h2 {
+      margin-left: 5px;
+      @include paddingLeft;
+    }
+  }
 }
 .new-promotion {
+  @include newPromotion;
+  @include responsive(phone-s-m-l-sizes) {
+    height: 500px;
+    background: #dfdfdf;
+  }
+  @include responsive(tab-md-land) {
+    h4 {
+      @include paddingLeft;
+    }
+    h3 {
+      @include paddingLeft;
+      width: 60%;
+    }
+  }
+  @include responsive(phone-plus) {
+    padding: 20px;
+  }
+  @include responsive(phone) {
     width: 100%;
-    background-color: #f7f6f3;
-    z-index: 1;
-    padding-left: 50px;
-        h3 {
-            font-size: 35px;
-        }
-        h4 {
-            font-size: 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            width: 60%;
-        }
-        p {
-            font-size: 20px;
-            font-weight: 400;
-            font-family: 'Montserrat', sans-serif;
-        }
-        @media only screen and (max-width: 1024px) {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-                h4 {
-                    padding-left: 20px;
-                }
-                h3 {
-                    padding-left: 20px;
-                }
-          }
-         @media only screen and (max-width: 650px) { 
-             width: 100%;
-             padding-left: 25px;
-                h4 {
-                    width: 90%;
-                    margin: 0;
-                    padding-left: 20px;
-                } 
-                h3 {
-                    padding-left: 20px;
-                }   
-        }
+    padding: 25px;
+  }
+  @include responsive(phone-middle-sizes) {
+    background: #dfdfdf;
+    width: 100%;
+    margin: 0;
+  }
 }
 .slideshow {
-    width: 90%;
-    margin-top: 70px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: space-between;
+  @include slideShow;
 }
-.more-information button {
-    display: inline-flex;
-    justify-content: space-evenly;
-    height: 55px;
-    width: 200px;
-    margin-left: 50px;
+.slide-content {
+  @include slideContent;
+  @include responsive(tab-md-land) {
+    h1 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  @include responsive(phone) {
+    position: unset;
+    width: 100%;
+    height: 350px;
+  }
+}
+.button-info button {
+  @include buttonInfo;
+  @include responsive(tab-port) {
     margin-right: 50px;
-    background-color: #ea545b;
-    border-radius: 15px;
-    border: 1px solid  #ea545b ;
-    color: white;
-    font-size: 19px;
-    letter-spacing: 1px;
-    cursor: pointer;
+    margin-top: -15px;
+  }
+  @include responsive(phone-plus) {
+    width: 150px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-top: 60px;
+  }
+  @include responsive(phone) {
+    margin-right: 20px;
+    margin-top: 65px;
+  }
+  @include responsive(phone-s-m-l-sizes) {
+    margin-top: 135px;
+  }
+}
+@include responsive(phone-s-m-l-sizes) {
+  .button-info {
+    margin-right: -20px;
+  }
+}
+@include responsive(reduse-size) {
+  .button-info {
+    margin-top: -50px;
+    margin-left: 250px;
+    button {
+      width: 180px;
+      height: 50px;
+    }
+  }
+}
+@include responsive(tab-middle-sizes) {
+  .button-info {
+    margin-top: -100px;
+    margin-left: 250px;
+    button {
+      width: 180px;
+      height: 50px;
+    }
+  }
+}
+@include responsive(phone-middle-sizes) {
+  .button-info {
+    margin-top: -100px;
+    margin-left: 250px;
+    button {
+      width: 130px;
+      height: 50px;
+    }
+  }
+}
+@include responsive(phone) {
+  .button-info {
+    margin-top: -120px;
+    margin-left: -100px;
+  }
 }
 .images-description {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50px;
-    z-index: 1;
-    padding-left: 50px;
-        h1 {
-            color: white;
-            font-size: 19px;
-            font-weight: 400;
-            font-family: 'Roboto', sans-serif;
-            letter-spacing: 1px;
-            width: 90%;
-        }
-        h2 {
-            color: white;
-            font-size: 30px;
-            font-family: 'Merriweather Sans', sans-serif;
-            font-weight: 400;
-            margin-top: 0px;
-            width: 90%;
-        }
-        hr {
-            width: 25%;
-            height: 6px;
-            background-color: white;
-            margin-left: 0;
-        }
-        h3 {
-            color: white;
-            font-size: 18px;
-            font-family: 'Merriweather Sans', sans-serif;
-            font-weight: 400;
-            margin-top: 0px;
-            letter-spacing: 1px;
-            width: 90%;
-        }
-                @media only screen and (max-width: 1024px) {
-                    width: 100%;
-                    top: 650px;
-                    position: absolute;
-                    padding-left: 0px;
-                        h1 {
-                            padding-left: 20px;
-                        }
-                        h2 {
-                            padding-left: 20px;
-                        }
-                        h3 {
-                            padding-left: 20px;
-                        }
-                }
-                @media only screen and (max-width: 650px) {
-                        padding-top: 120px;
-                    h1 {
-                        padding-left: 20px;
-                    }
-                    h2 {
-                            padding-left: 20px;
-                    }
-                    h3 {
-                            padding-left: 20px;
-                    }
-                }
-                @media only screen and (max-width: 350px) {
-                    padding-top: 300px;
-                }
+  @include imageDescription;
 }
+@include sliderAll;

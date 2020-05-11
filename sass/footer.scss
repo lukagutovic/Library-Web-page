@@ -1,81 +1,49 @@
 footer {
-    max-width: 100%;
-    display: flex;
-    // align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
+@include footerProperties;
 }
-.mani-container {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 140px;
-        @media only screen and (max-width: 1024px) {
-            margin: 0
-            percentage($number: 0); 
+.footer-wrapper {
+   @include footerWrapper;
+        @include responsive(tab-land) {
+            margin-top: 700px;
+            padding: 0;
+            margin-left: 20px;
         }
-        @media only screen and (max-width: 1200px) {
+        @include responsive(laptop) {
             margin: 0;
             padding: 0;
-            flex-wrap: wrap;
-            margin-top: 100px;
-            // bottom: -800px;  
+            flex-wrap: wrap; 
+            padding: 0;
+            margin-left: 20px;
         }
-        @media only screen and (max-width: 650px) {
+        @include responsive(tab-md-land) {
+            margin: 0;
+            padding: 0;
+            margin-left: 20px;
+        }
+        @include responsive(phone) {
             margin: 0;
             padding: 0;  
         }
 
 }
-.information {
-    width: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
-            p {
-                font-size: 20px;
-                color: rgb(161, 157, 157);
-                font-weight: 400;
-                font-family: 'Open Sans', sans-serif;
-                padding: 0;
-                margin-top: 4px;
-                width: 80%;
-            }
-            h1 {
-                font-size: 20px;
-            }
-            @media only screen and (max-width: 1200px) {
+.footer-widget {
+        @include footerWidget;
+            @include responsive(laptop) {
                 width: 30%;
             }
-            @media only screen and (max-width: 650px) {
+            @include responsive (phone) {
                 width: 100%;
                 display: flex;
                 align-items: center;
-                text-align: center;          }
+                text-align: center; 
+            }
             } 
-.network p {
-    display: flex;
-    align-items: center;
-    justify-content:right;
-    margin-right: 50px;
-    margin-left: 40px;
-    font-size: 20px;
-    color: rgb(161, 157, 157);
-    font-weight: 400;
-    font-family: 'Open Sans', sans-serif;
-    float: right;
-        
+.social-networks-wrapper p {
+ @include socialNetworkParagraph;
 }
 .material-icons {
     margin-left: 35px;
-    @media only screen and (max-width: 650px) {
+    @include responsive (phone) {
         margin-left: 20px;      
     }
-      
 }
-
-
-

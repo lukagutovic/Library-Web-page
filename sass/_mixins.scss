@@ -1,0 +1,930 @@
+/* MIXINS FOR MAIN */
+
+@mixin sectionProperties {
+  display: flex;
+  margin-left: 60px;
+  margin-top: 70px;
+  position: relative;
+}
+
+@mixin activitiesWrapper {
+  width: 69%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+@mixin paddingLeft {
+  padding-left: 20px;
+}
+@mixin activitiesHeadlineWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    font-family: "Amiri", serif;
+    letter-spacing: 1px;
+  }
+  h2 {
+    padding-left: 30px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-family: serif;
+    color: rgb(94, 91, 91);
+    margin-right: 100px;
+    hr {
+      height: 5px;
+      background-color: #ea545b;
+    }
+  }
+}
+
+@mixin newPromotion {
+  width: 100%;
+  height: 400px;
+  background-color: #dfdfdf;
+  z-index: 1;
+  padding-left: 50px;
+  h3 {
+    font-size: 4rem;
+    font-family: "Amiri", serif;
+  }
+  .descriptive-paragraph {
+    font-size: 2rem;
+    font-weight: 400;
+    width: 70%;
+    padding: 10px;
+  }
+}
+@mixin slideShow {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+@mixin slideContent {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  h1 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 90%;
+    padding-left: 50px;
+    padding-top: 70px;
+  }
+  h2 {
+    color: white;
+    font-size: 3rem;
+    margin-top: 0px;
+    width: 90%;
+    padding-left: 50px;
+  }
+  hr {
+    width: 30%;
+    height: 4px;
+    background-color: white;
+    margin-left: 0;
+  }
+  h3 {
+    color: white;
+    font-size: 2.4rem;
+    margin-top: 0px;
+    letter-spacing: 1px;
+    padding-left: 50px;
+  }
+}
+@mixin buttonInfo {
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 55px;
+  padding-left: 10px;
+  margin-right: 90px;
+  background-color: #ea545b;
+  border-radius: 15px;
+  border: 1px solid #ea545b;
+  color: white;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+@mixin imageDescription {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+  padding-left: 50px;
+  h1 {
+    color: white;
+    font-size: 1.9rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+    width: 90%;
+  }
+  h2 {
+    color: white;
+    font-size: 3rem;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 400;
+    margin-top: 0px;
+    width: 90%;
+  }
+  hr {
+    width: 25%;
+    height: 6px;
+    background-color: white;
+    margin-left: 0;
+  }
+  h3 {
+    color: white;
+    font-size: 1.8rem;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 400;
+    margin-top: 0px;
+    letter-spacing: 1px;
+    width: 90%;
+  }
+}
+
+@mixin sliderAll {
+  .slide-one {
+    background-image: url("/img/book-zorica.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.2;
+    left: 0;
+  }
+  .slide-two {
+    background-image: url("/img/sveti_sava.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.2;
+  }
+  .slide-three {
+    background-image: url("/img/non_imprimator.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.2;
+  }
+  .slide-fore {
+    background-image: url("/img/poljski_put.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.2;
+  }
+  #slider {
+    width: 30%;
+    height: 380px;
+    background-color: #6fcbe7;
+    position: absolute;
+    right: 65px;
+    top: 20px;
+    z-index: 1;
+    @include responsive(tab-md-land) {
+      height: 50%;
+      top: 100px;
+      right: 10px;
+    }
+    @include responsive(phone) {
+      position: unset;
+      width: 100%;
+    }
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    @include responsive(tab-md-land) {
+      width: 100%;
+    }
+  }
+  .slider-controls {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+
+    @include responsive(phone-plus) {
+      width: 200px;
+      height: 90px;
+    }
+    @include responsive(phone-middle-sizes) {
+      width: 200px;
+      height: 50px;
+    }
+  }
+  .prev {
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    background-color: rgb(255, 255, 255);
+    transition: 0.6s ease;
+    border-radius: 70%;
+    box-shadow: 0px 10px 10px -10px rgb(58, 57, 57);
+    cursor: pointer;
+    @include responsive(tab-land) {
+      margin-top: -50px;
+    }
+    @include responsive(tab-md-land) {
+      margin-top: 10px;
+    }
+    @include responsive(tab-port) {
+      margin-top: -10px;
+    }
+    @include responsive(phone-middle-sizes) {
+      width: 50px;
+      height: 50px;
+      margin-top: -45px;
+    }
+    @include responsive(phone) {
+      width: 50px;
+      height: 50px;
+      margin-top: -400px;
+    }
+    @include responsive(phone-s-m-l-sizes) {
+      margin-top: -430px;
+      right: 120px;
+    }
+  }
+}
+
+/* MIXINS FOR ACIDE ANCETA */
+
+@mixin acideContainer {
+  max-width: 100%;
+  display: flex;
+  padding-left: 70px;
+  justify-content: flex-end;
+}
+@mixin ancetaCover {
+  width: 60%;
+  position: relative;
+  margin-right: 40px;
+}
+@mixin containerProperties {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 2.4rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+@mixin ancetaProperties {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 95%;
+  background-color: #dfdfdf;
+  z-index: 1;
+  margin-left: 40px;
+  position: absolute;
+  margin-top: 30px;
+  padding-bottom: 20px;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    font-family: "Amiri", serif;
+    letter-spacing: 1px;
+    @include responsive(phone) {
+      padding-left: 30px;
+    }
+  }
+  p {
+    font-size: 1.8rem;
+    font-family: "Merriweather Sans", sans-serif;
+    color: black;
+    white-space: 10px;
+    padding-top: 50px;
+    @include responsive(phone) {
+      padding-left: 30px;
+    }
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-family: "Merriweather Sans", sans-serif;
+    color: black;
+    font-weight: bold;
+    white-space: 10px;
+    @include responsive(phone) {
+      padding-left: 30px;
+    }
+  }
+  span {
+    color: red;
+  }
+  h4 {
+    font-size: 1.4rem;
+    font-family: "Merriweather Sans", sans-serif;
+    color: rgb(102, 97, 97);
+    white-space: 10px;
+    font-weight: 400;
+    @include responsive(phone) {
+      padding-left: 30px;
+    }
+  }
+}
+@mixin ancetaButton {
+  display: inline-flex;
+  justify-content: space-evenly;
+  height: 45px;
+  width: 150px;
+  margin-right: 50px;
+  background-color: #ea545b;
+  border-radius: 7px;
+  border: 1px solid #ea545b;
+  color: white;
+  font-size: 1.4rem;
+  padding-right: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+@mixin associatesWrapper {
+  width: 20%;
+  margin-right: 0px;
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: "Amiri", serif;
+    letter-spacing: 1px;
+    margin-left: 60px;
+  }
+  img {
+    width: 80%;
+    height: 17%;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    margin-top: 10px;
+  }
+}
+
+/* MIXINS FOR ASIDE */
+
+@mixin asideProperties {
+  max-width: 100%;
+  padding: 70px;
+  margin-top: 80px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  @include responsive(phone) {
+    padding: 0;
+    margin: 0;
+    position: unset;
+  }
+}
+
+@mixin bookLoversHeadline {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: "Amiri", serif;
+    letter-spacing: 1px;
+  }
+  h2 {
+    padding-left: 30px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-family: serif;
+    color: rgb(190, 184, 184);
+    margin-right: 10px;
+    hr {
+      height: 5px;
+      background-color: #ea545b;
+    }
+  }
+}
+
+@mixin booksTrending {
+  width: 100%;
+  display: flex;
+  padding-left: 50px;
+  a {
+    font-size: 2rem;
+    padding-top: 12px;
+    padding-right: 100px;
+    color: rgb(207, 204, 204);
+    font-weight: 600;
+    height: 40px;
+    border: none;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+  }
+}
+@mixin mostReadTitles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+@mixin mostReadBooks {
+  width: 11%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  img {
+    width: 100%;
+    height: 70%;
+    margin-bottom: 40px;
+    box-shadow: 0px 12px 20px -15px rgb(87, 86, 86);
+  }
+  h2 {
+    font-size: 1.8rem;
+    color: rgb(161, 157, 157);
+    font-weight: 400;
+    opacity: 0.1;
+    position: absolute;
+    top: 220px;
+  }
+  h1 {
+    width: 100%;
+    font-size: 2rem;
+    font-family: "Merriweather Sans", sans-serif;
+    color: black;
+    flex-wrap: 400;
+  }
+  p {
+    font-size: 2rem;
+    color: rgb(161, 157, 157);
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    float: right;
+  }
+}
+@mixin oneMostRead {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  img {
+    width: 40%;
+    height: 70%;
+    margin-top: -100px;
+    box-shadow: 0px 20px 20px -15px rgb(58, 57, 57);
+  }
+}
+
+@mixin descriptionOfTheBooks {
+  padding-left: 30px;
+  width: 40%;
+  position: relative;
+  h1 {
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+  }
+  h3 {
+    font-size: 1.8rem;
+    color: rgb(161, 157, 157);
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+  }
+  h2 {
+    font-size: 2.8rem;
+    font-family: "Amiri", serif;
+    width: 100%;
+  }
+  p {
+    font-size: 2rem;
+    font-family: "Merriweather Sans", sans-serif;
+    color: black;
+    white-space: 10px;
+    @include responsive(laptop) {
+      font-size: 1.5rem;
+    }
+  }
+  h4 {
+    font-size: 18rem;
+    position: absolute;
+    z-index: 1;
+    color: gray;
+    opacity: 0.1;
+    right: -50px;
+    top: -10px;
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+/* MIXINS FOR FOOTER */
+
+@mixin footerProperties {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+@mixin footerWrapper {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 600px;
+}
+@mixin footerWidget {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  p {
+    font-size: 2rem;
+    color: rgb(161, 157, 157);
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin-top: 4px;
+    width: 80%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+@mixin socialNetworkParagraph {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-right: 50px;
+  margin-left: 40px;
+  font-size: 2rem;
+  color: rgb(161, 157, 157);
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  float: right;
+}
+@mixin footerProperties {
+}
+
+/* MIXINS FOR HEADER */
+@mixin bodyProperties {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 300px;
+  background-image: url("dusanova-kletva.jpg");
+}
+@mixin headerProperties {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@mixin topHeaderLine {
+  background-color: #efb231;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  text-decoration: underline;
+}
+@mixin logoBox {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-right: 20px;
+  img {
+    width: 140px;
+    height: 120px;
+  }
+}
+@mixin titleProperties {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Roboto", sans-serif;
+  padding-left: 20px;
+  letter-spacing: 1px;
+  width: 60%;
+  font-family: "Amiri", serif;
+}
+@mixin navLinksInfo {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 150px;
+  width: 70%;
+}
+@mixin informationNav {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  a {
+    font-size: 1.3rem;
+    padding-top: 12px;
+    margin: 0px auto;
+    color: rgb(80, 76, 76);
+    font-weight: 600;
+    height: 40px;
+    border: none;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+  }
+}
+@mixin laungageProperties {
+  width: 75px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 7px;
+  margin-top: 5px;
+  margin-right: -60px;
+  padding-left: 10px;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+@mixin navLinksCategory {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30px;
+  margin-right: -90px;
+  cursor: pointer;
+}
+@mixin searchBarWrapper {
+  background-color: #2a3743;
+  display: flex;
+  max-width: 100%;
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: flex-start;
+}
+@mixin categoryOptions {
+  width: 15%;
+  position: absolute;
+  height: 50px;
+  margin-top: 1px;
+  border-radius: 12px;
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+  font-size: 1.8rem;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+@mixin searchCategoryButton {
+  height: 50px;
+  width: 220px;
+  margin-left: 30px;
+  margin-right: 70px;
+  background-color: $red;
+  border-radius: 15px;
+  border: 1px solid $red;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+@mixin margins-and-height {
+  margin-left: 70px;
+  margin-top: 10px;
+  height: 50px;
+}
+@mixin margins-height {
+  margin-left: 60px;
+  margin-top: 10px;
+  height: 50px;
+}
+@mixin font-padding {
+  font-size: 1.4rem;
+  padding-left: 10px;
+}
+@mixin toggler {
+  width: 50px;
+  height: 50px;
+  background: $orange;
+  border-radius: 10px;
+  box-shadow: 2px 1px 4px 0px;
+}
+@mixin toggle-search {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  background: #2a3743;
+  color: white;
+  margin-left: 100px;
+}
+$orange: #efb231;
+$red: #ea545b;
+
+/* MIXINS FOR SECTION */
+
+@mixin nextActivities {
+  width: 69%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
+}
+@mixin promotionDescription {
+  width: 90%;
+  height: 90%;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #45a2c6;
+  border: 2px solid #71d1f7;
+  padding-left: 50px;
+  padding-top: 40px;
+  h1 {
+    font-size: 4rem;
+    width: 70%;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family: "Amiri", serif;
+    @include responsive(tab-land-plus) {
+      font-size: 4rem;
+    }
+    @include responsive(tab-md-land) {
+      width: 100%;
+    }
+  }
+  h2 {
+    @include responsive(tab-land-plus) {
+      font-size: 1.2rem;
+    }
+    color: white;
+    padding: 0px;
+    margin: 0;
+  }
+  p {
+    @include responsive(tab-land-plus) {
+      font-size: 4rem;
+    }
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 5rem;
+    font-family: "Amiri", serif;
+  }
+  h3 {
+    font-size: 2.5rem;
+    width: 55%;
+    color: white;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    @include responsive(tab-land-plus) {
+      font-size: 1.7rem;
+    }
+    @include responsive(tab-md-land) {
+      width: 100%;
+      font-size: 1.6rem;
+    }
+  }
+  @include responsive(tab-md-land) {
+    margin: 30px;
+  }
+}
+
+@mixin firstActivities {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    font-size: 40px;
+    font-weight: 500;
+    font-family: "Amiri", serif;
+    letter-spacing: 1px;
+  }
+  h2 {
+    padding-left: 30px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: serif;
+    color: rgb(94, 91, 91);
+    margin-right: 100px;
+    hr {
+      height: 5px;
+      background-color: #ea545b;
+    }
+  }
+}
+@mixin newPromotion {
+  width: 80%;
+  height: 680px;
+  background-color: #45a2c6;
+  z-index: 1;
+  padding: 30px;
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+}
+@mixin buttonWrapper {
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 55px;
+  width: 200px;
+  background-color: #45a2c6;
+  border-radius: 12px;
+  border: 3px solid white;
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+@mixin membershipInformation {
+  border-left: 3px solid rgb(250, 247, 247);
+  width: 34%;
+  padding-left: 80px;
+
+  p {
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: "Amiri", serif;
+    letter-spacing: 1px;
+  }
+}
+@mixin bookCover {
+  width: 30%;
+  height: 60%;
+  position: absolute;
+  z-index: 1;
+  bottom: -50px;
+  right: -50px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin arrowNext {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  margin-top: -22px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: 0.6s ease;
+  background-color: rgb(255, 255, 255);
+  border-radius: 40px;
+  margin-right: -30px;
+  right: 0;
+  box-shadow: 0px 10px 10px -10px rgb(58, 57, 57);
+}
+
+@mixin sliderControlsImage {
+  width: 200px;
+  height: 80px;
+  display: flex;
+  position: relative;
+  margin-right: 120px;
+  margin-top: 40px;
+}
+
+@mixin sliderControlPromotion {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 240px;
+  left: 110px;
+  z-index: 5;
+}

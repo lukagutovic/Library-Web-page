@@ -1,62 +1,33 @@
+@import 'main.scss';
+
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-width: 400px;
+    @include bodyProperties;
 }
 header {
-    max-width: 100%;
+    @include headerProperties;
 }
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-.header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.header-container {
-    background-color: #efb231;
-    font-size: 20px;
-    font-weight: 500;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 60px;
-    text-decoration: underline;
-        @media only screen and (max-width: 650px) {
+.top-header-line{
+   @include topHeaderLine;
+        @include responsive(phone) {
             width: 100%;
             padding: 0;
             margin: 0;
         }
-      
 }
 nav {
     display: flex;
     padding-top: 10px;
     max-width: 100%; 
-        @media only screen and (max-width: 1200px) {
+        @include responsive(laptop) {
               flex-direction: column;
         }   
 }
-.logo {
-    width: 29%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 30px;
-    padding-top: 20px;
-    padding-right: 20px;
-        img {
-            width: 160px;
-            height: 140px;  
-        }
-        @media only screen and (max-width: 1200px) {
-
+.logo-box {
+  @include logoBox;
+        @include responsive (laptop) {
             justify-content: flex-start;
         } 
-        @media only screen and (max-width: 650px) {
+        @include responsive (phone) {
             width: 100%;
             padding-left: 0px;
             margin-left: 10px;
@@ -66,199 +37,181 @@ nav {
                  height: 100px;
              }
         } 
-        @media only screen and (max-width: 650px) {
-            flex-wrap: wrap;
-            padding: 0px;
-            margin: 0px;
-          }        
 }
 .title {
-    font-size: 27px;
-    font-weight: 800;
-    font-family: 'Roboto', sans-serif;
-    padding-left: 20px ;
-    letter-spacing: 1px;
-    width: 60%;
-        @media only screen and (max-width: 650px) {
-            font-size: 25px;
+    @include titleProperties;
+        @include responsive(phone) {
+            font-size: 2.5rem;
      } 
-       
-      
 }
-.nav-container {
-    display: flex;
-    align-items: flex-end;  
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 100px;
-    width: 70%;
-        @media only screen and (max-width: 1200px) {
+.nav-links-info {
+    @include navLinksInfo;
+        @include responsive (laptop) {
             width: 100%;
-            margin-right: 0px;
+            margin-left: -100px;
             justify-content: flex-start;
          }      
+         @include responsive(phone){
+             width: 300px;
+             margin-left: -20px;
+         }
+         @include responsive(phone-s-m-l-sizes){
+            width: 200px;
+            margin-left: -20px;
+        }
 }
 .information-nav {
-    width: 60%;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-        a {
-            font-size: 18px;
-            padding-top: 12px;
-            margin: 0px auto;
-            color: rgb(80, 76, 76);
-            font-weight: 600;
-            height: 40px;
-            border: none;
-            text-decoration: none;
-            font-family: 'Open Sans', sans-serif;
-            cursor: pointer;
-        }
-        @media only screen and (max-width: 1024px) {
+    @include informationNav;
+        @include responsive (tab-md-land ) {
             width: 50%;
             justify-content: flex-start;
             padding-right: 30px;
          } 
-         @media only screen and (max-width: 950px) {
+         @include responsive(tab-port) {
             width: 80%;
          } 
-         @media only screen and (max-width: 650px) {
+         @include responsive(phone) {
             flex-wrap: wrap;
             width: 90%;
           }
-      
 }
 .language {
-    width: 75px;
-    height: 40px;
-    border: 1px solid gray;
-    border-radius: 7px;
-    margin-left: 60px;
-    margin-top: 5px;
-    padding-left: 10px;
-    font-size: 19px;
-    font-weight: 600;
+  @include laungageProperties;
+      @include responsive(phone){
+        width: 50px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
        
 }
-.category {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 30px;
-    cursor: pointer;
+.nav-links-category {
+    @include navLinksCategory;
         a {
-           font-size: 19px; 
+           font-size: 1.5rem; 
            padding-left: 50px;
            text-decoration: none;
            color: rgb(80, 76, 76);
            font-weight: 600; 
-                @media only screen and (max-width: 1024px) {
-                font-size: 14px;
-                padding-left: 10px;
+           margin-right: 10px;
+             @include responsive (big-desktop) {
+                  @include font-padding;
+            } 
+                @include responsive (tab-land) {
+                    @include font-padding;
                 }     
         }
-        @media only screen and (max-width: 1200px) {
+        @include responsive(laptop) {
             width: 100%;
             justify-content: flex-start;
             margin: 0px;
          }  
-         @media only screen and (max-width: 650px) {
+         @include responsive (phone) {
            flex-wrap: wrap;
-         }  
+         }   
 }
-.search-container {
-    background-color:#2a3743;
-    display: flex;
-    max-width: 100%;
-    padding-top: 20px;
-    margin-top: 40px;
-    padding-bottom: 20px;
-    justify-content: flex-start;
-        @media only screen and (max-width: 1200px) {
+.search-bar-wrapper {
+  @include searchBarWrapper;
+        @include responsive (laptop) {
             flex-wrap: wrap;
         } 
 }
-.book-name {
+.search-bar {
     width: 80%;
     background-color:#2a3743;
     margin-left: 60px;
         input {
             height: 50px;
             width: 80%;
-            border-radius: 12px;
+            border-radius: 8px;
             border-bottom-right-radius: unset;
             border-top-right-radius: unset;
             padding-top: 10px;
-                @media only screen and (max-width: 650px) {
-                    width: 65%;
-                    border-radius: 12px;
-                    margin-right: 10px;
-                }
+            @include responsive(tab-middle-sizes){
+                width: 500px;
+                height: 50px;
+            }
+            @include responsive(phone-middle-sizes){
+                width: 320px;
+                height: 50px;
+        
+            }
+            @include responsive(phone){
+                width: 280px;
+                height: 40px;
+            }
+            @include responsive(phone-s-m-l-sizes){
+                width: 150px;
+                height: 40px;
+            }
         }
         ::placeholder {
             padding-left: 30px;
-            font-size: 22px;
+            font-size: 1.6rem;
             letter-spacing: 1px;
         }
-        @media only screen and (max-width: 650px) {
-            // flex-direction: column;
-            margin-left: 10px; 
-            width: 100%;
-                ::placeholder {
-                    font-size: 12px;
-                    width: 45%;
-                }
-                input {
-                    width: 50%;
-                }
-         }
 }
-.category-books {
-    width: 15%;
-    position: absolute;
-    height: 64px;
-    margin-top: 1px;
-    border-radius: 12px;
-    border-top-left-radius: unset;
-    border-bottom-left-radius: unset;
-    font-size: 25px;
-    font-weight: bold; 
-    padding-left: 10px; 
-    padding-right: 20px;
-        @media only screen and (max-width: 1024px) {
-            width: 20%;
-            font-size: 18px;
-            padding-left: 2px;
-        }
-        @media only screen and (max-width: 650px) {
-            width: 40%;
-            font-size: 15px;
-            border-radius: 12px;
-            font-size: 18px;
-            padding-left: 2px;
-        }  
+.category-options {
+    @include categoryOptions;
+    @include responsive(tab-middle-sizes){
+        height: 50px;
+    }
+    @include responsive(phone-middle-sizes){
+        width: 150px;
+        height: 50px;
+    }
+    @include responsive(phone){
+        width: 130px;
+        height: 40px;
+    }
+    @include responsive(phone-s-m-l-sizes){
+        width: 70px;
+        height: 40px;
+    }
 }
 .search-category button {  
-    height: 65px;
-    width: 220px;
-    margin-left: 30px;
-    margin-right: 70px;
-    background-color: #ea545b;
-    border-radius: 15px;
-    border: 1px solid  #ea545b ;
-    color: white;
-    font-size: 19px;
-    letter-spacing: 1px;
-    cursor: pointer;
-        @media only screen and (max-width: 1200px) {
-           margin-top: 20px;
-           margin-left: 60px;
+@include searchCategoryButton;
+    @include responsive(laptop-l){
+     @include margins-and-height;
+    }
+    @include responsive(tab-md-land){
+        @include margins-and-height;
+    }
+    @include responsive(tab-port){
+        @include margins-and-height;
+    }
+    @include responsive(tab-middle-sizes){
+        @include margins-and-height;
+    }
+   
+    @include responsive(phone-middle-sizes){
+        @include margins-and-height;
+    }
+    @include responsive(phone){
+        @include margins-and-height;
+    }
+    @include responsive(phone-s-m-l-sizes){
+        @include margins-height;
+    }
+}
+
+.navbar-toggler {
+    @include toggler;
+    .navbar-toggler-icon{
+        width: 40px;
+        height: 40px;
+        &:hover{
+            color: $orange;
         }
-        @media only screen and (max-width: 650px) {
-            margin: 10px;
-         }
-         :active {
-            border: none;
-         }
+    }
+    &:hover{
+    background: #bd8815;
+    }
+}
+
+.toggler-search{
+    @include toggle-search;
+}
+.book-img{
+    width: 100px;
+    height: 50px;
 }

@@ -1,215 +1,125 @@
 .aside-container {
-    max-width: 100%;
-    display: flex;
-    padding-left: 70px;
-    justify-content: flex-end;
-
-   
-    @media only screen and (max-width: 1024px) {
-         flex-direction: column;
-         width: 100%;
-         padding: 0;
-         margin: 0;
-      }
-      @media only screen and (max-width: 650px) {
-        position: unset;
-     }
+  @include acideContainer;
+  @include responsive(tab-md-land) {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  @include responsive(phone) {
+    position: unset;
+  }
 }
 .anceta-cover {
-   width: 60%;
-   position: relative;
-   border: 1px solid rgb(226, 223, 223);
-   margin-right: 40px;
-
-    @media only screen and (max-width: 1024px) {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-    }
-    @media only screen and (max-width: 650px) {
-    //    position: absolute;
-      
-    }
-
+  @include ancetaCover;
+  @include responsive(tab-md-land) {
+    width: 100%;
+    padding: 0;
+  }
+  @include responsive(phone-l-plus-sizes) {
+    width: 80%;
+    margin-top: -300px;
+    margin-left: 60px;
+  }
+  @include responsive(phone-s-m-l-sizes) {
+    width: 80%;
+    margin-top: -300px;
+    margin-left: 30px;
+  }
 }
-// .container {
-//     display: block;
-//     position: relative;
-//     padding-left: 35px;
-//     margin-bottom: 12px;
-//     cursor: pointer;
-//     font-size: 24px;
-//     -webkit-user-select: none;
-//     -moz-user-select: none;
-//     -ms-user-select: none;
-//     user-select: none;
-//   }
-//   .container  input {
-//     position: absolute;
-//     opacity: 0;
-//     cursor: pointer;
-//     width: 60%;
-//   }
-//   .checkmark {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     height: 25px;
-//     width: 25px;
-//     background-color: #eee;
-//     border-radius: 50%;
-//   }
-//   .container:hover input ~ .checkmark {
-//     background-color: #ccc;
-//   }
-//   .container input:checked ~ .checkmark {
-//     background-color: #2196F3;
-//   }
-//   .checkmark:after {
-//     content: "";
-//     position: absolute;
-//     display: none;
-//   }
-//   .container input:checked ~ .checkmark:after {
-//     display: block;
-//   }
-//   .container .checkmark:after {
-//        top: 9px;
-//       left: 9px;
-//       width: 8px;
-//       height: 8px;
-//       border-radius: 50%;
-//       background: white;
-//   }
+.container {
+  @include containerProperties;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
 .anceta {
-      display: flex;
-      flex-direction: column;
-      padding-left: 30px;
-      padding-right: 30px;
-      width: 95%;
-      height: 100%;
-      background-color: #f7f6f3;
-      z-index: 1;
-      margin-left: 40px;
-      position: absolute;
-      margin-top: 30px;
-      padding-bottom: 20px;
-        h1 {
-            font-size: 40px;
-            font-weight: 500;
-            font-family: 'Roboto', sans-serif;
-            letter-spacing: 1px;
-            @media only screen and (max-width: 650px) {
-                padding-left: 30px;
-             }
-        }
-        p {
-            font-size: 24px;
-            font-family: 'Merriweather Sans', sans-serif;
-            color: black;           
-            white-space:10px;
-                @media only screen and (max-width: 650px) {
-                    padding-left: 30px;
-                }
-        }
-        h3 {
-            font-size: 22px;
-            font-family: 'Merriweather Sans', sans-serif;
-            color: black;           
-            white-space:10px;
-                @media only screen and (max-width: 650px) {
-                    padding-left: 30px;
-                }
-        }
-        span {
-            color: red;
-        }
-        h4 {
-            font-size: 22px;
-            font-family: 'Merriweather Sans', sans-serif;
-            color: rgb(102, 97, 97);           
-            white-space:10px;
-            font-weight: 400;
-                @media only screen and (max-width: 650px) {
-                    padding-left: 30px;
-                }
-        }
-        input {
-            // width: 100%;
-            height: 90px;
-            border: apx solid grey;
-            border-radius: 10px;
-            padding-left: 10px;
-            font-size: 25px;
-                @media only screen and (max-width: 1024px) {
-                    width: 60%;
-                }
-                @media only screen and (max-width: 650px) {
-                    width: 70%;
-                    height: 50px;
-                    margin-left: 40px;
-                }
-            }
-        @media only screen and (max-width: 1200px) {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            position: unset;
-        }
-        @media only screen and (max-width: 650px) {
-           width: 100%;
-           
-        }
+  @include ancetaProperties;
+  input {
+    height: 40px;
+    border: 1px solid rgb(192, 191, 191);
+    border-radius: 7px;
+    padding-left: 10px;
+    font-size: 2.5rem;
+    @media only screen and (max-width: 1024px) {
+      // width: 60%;
+    }
+    @include responsive(phone) {
+      height: 50px;
+      margin: 20px;
+    }
   }
-.anceta button { 
-    display: inline-flex;
-    justify-content: space-evenly;
-    height: 55px;
-    width: 200px;
-    margin-right: 50px;
-    background-color: #ea545b;
-    border-radius: 15px;
-    border: 1px solid  #ea545b ;
-    color: white;
-    font-size: 19px;
-    letter-spacing: 1px;
-    cursor: pointer;
+  @include responsive(laptop) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: unset;
   }
-  .associates {
-    width: 20%;
-    margin-right: 0px;
-        h1 {
-            font-size: 40px;
-            font-weight: 500;
-            font-family: 'Roboto', sans-serif;
-            letter-spacing: 1px;
-            margin-left: 60px;
-        }
-        img {
-            width: 80%;
-            height: 17%;
-            margin-bottom: 20px;
-            margin-left: 60px;
-            margin-top: 10px;
-        }
-        @media only screen and (max-width: 1024px) {
-            width: 100%;
-            display: flex;
-                img {
-                    height: 100px;
-                    width: 150px;
-                    margin-left: 10px;
-                }
-                h1 {
-                    display: none;
-                }
-         }
-         @media only screen and (max-width: 650px) {
-            flex-wrap: wrap;
+  @include responsive(phone) {
+    width: 100%;
+  }
+}
+.anceta button {
+  @include ancetaButton;
+  @include responsive(phone) {
+    margin: 20px;
+    height: 50px;
+    width: 170px;
+  }
+}
+.associates-wrapper {
+  @include associatesWrapper;
+  @include responsive(laptop) {
+    width: 100%;
+    display: flex;
+    img {
+      height: 100px;
+      width: 150px;
+      margin-left: 10px;
+    }
+    h1 {
+      display: none;
+    }
+  }
+  @include responsive(phone) {
+    flex-wrap: wrap;
 
-            width: 100%;
-                img {
-                    width: 45%;
-                }
-         }
+    width: 100%;
+    img {
+      width: 45%;
+    }
   }
+}

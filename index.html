@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link href="css/style.css" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
     <title>Gradska biblioteka Novi Sad</title>
 </head>
 <body>
     <header>
-            <div class="header-container"> 48. BRANKOVO KOLO - NOVE KNJIGE BRANKOVOG KOLA</div>
-        <nav>
-            <div class="logo">
-                <img src="img/logo.jpg" alt="gradska biblioteka"/>
-                <div class="title">ГРАДСКА БИБЛИОТЕКА У НОВОМ САДУ</div>
+            <div class="top-header-line"> 48. BRANKOVO KOLO - NOVE KNJIGE BRANKOVOG KOLA</div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo-box">
+                <img src="img/logo.jpg" alt="Gradska biblioteka NS"/>
+                <div class="title">ГРАДСКА БИБЛИОТЕКА <br /> У НОВОМ САДУ</div>
             </div>
-            <div class="nav-container">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavBar">
+            <div class="nav-links-info">
                 <div class="information-nav">
                     <a href="#">Lokacija i Radno Vreme</a>
                     <hr/>
@@ -28,7 +35,7 @@
                         <option value="1">EN</option>
                     </select>
                 </div>
-                <div class="category">
+                <div class="nav-links-category">
                     <a href="#">KATALOG</a>
                     <a href="#">DIGITALIZACIJA</a>
                     <a href="#">AKTIVNOSTI</a>
@@ -36,11 +43,12 @@
                     <a href="#">GALERIJA</a>
                 </div>
             </div>
+        </div>
         </nav>
-        <div class="search-container">
-            <div class="book-name">
-                <input type="tex" placeholder="Unesite naziv knjige, ime autora ili ključnu reč..."/>
-                <select class="category-books">
+        <div class="search-bar-wrapper">
+            <div class="search-bar">
+                <input type="text" placeholder="Unesite naziv knjige, ime autora ili ključnu reč..."/>
+                <select class="category-options">
                     <option value="0">Svi ogranci</option>
                     <option value="1"></option>
                 </select>
@@ -52,8 +60,12 @@
     </header>
 <main>
         <section>
-            <div class="new-activities">
-                <div class="first-activities">
+            <div class="activities-wrapper">
+                <div class="slider-controls"> 
+                    <a id="arrow-left" class="prev arrow" onclick="plusSlides(-1)">&#10094;</a>
+                    <a id="arrow-right" class="next arrow" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <div class="activities-headline-wrapper">
                     <h1>Izdvojene aktivnosti</h1>
                     <h2>SVE AKTIVNOSTI
                         <hr/>
@@ -61,16 +73,16 @@
                 </div>
                 <div class="new-promotion">
                    <h3>Promocija romana Zorice Tijanić</h3>
-                    <h4>Novi roman književnice i novinarke Zorice Tijanić, 
+                    <p class="descriptive-paragraph">Novi roman književnice i novinarke Zorice Tijanić, 
                         esejistikinje, putopisca, književne kritičarke,
                         kolumnistkinje i urednice više knjiga poezije.
-                    </h4>
-                    <h4><b>Govore :</b> <br/>
+                    </p>
+                    <p class="artist-paragraph"><b>Govore :</b> <br/>
                     Viktor Radun, Milena Letić i Zorica Tijanić
-                    </h4>
+                    </p>
                     <div class="slideshow">
                         <div></div>
-                        <div class="more-information">
+                        <div class="button-info">
                             <button>Pročitaj više 
                                 <i class="material-icons">
                                     trending_flat
@@ -79,16 +91,103 @@
                         </div>
                     </div>
                 </div>
+                <div class="new-promotion">
+                    <h3>Svetosavska poetska riznica</h3>
+                     <p class="descriptive-paragraph">Priredio Dejan Tomić u slavu Svetog Simeona Mirotočivog - Stefana Nemanje
+                     </p>
+                     <p class="artist-paragraph"><b>Učestvuju :</b> <br/>
+                     Mr Jovan Milanović, Zoran Kolundzić, Janja Todorović, miodrag Petrović, Dejan Tomić
+                     </p>
+                     <div class="slideshow">
+                         <div></div>
+                         <div class="button-info">
+                             <button>Pročitaj više 
+                                 <i class="material-icons">
+                                     trending_flat
+                                     </i>
+                             </button>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="new-promotion">
+                    <h3>Predstavljanje knjige Dejana Vukićevića</h3>
+                     <p class="descriptive-paragraph">Dejan Vukićević <br/>
+                         NON IMPRIMATUR ili cenzura u bibliotekarstvui izdavaštvu
+                     </p>
+                     <p class="artist-paragraph"><b>Razgovor o knjizi :</b> <br/>
+                     Nebojša Kovačevic, Dejan Vukićević
+                     </p>
+                     <div class="slideshow">
+                         <div></div>
+                         <div class="button-info">
+                             <button>Pročitaj više 
+                                 <i class="material-icons">
+                                     trending_flat
+                                     </i>
+                             </button>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="new-promotion">
+                    <h3>Aleksandar Čotrić</h3>
+                     <p class="descriptive-paragraph">Poljski put: analogija poljskog aforizma <br/>
+                         Trn i ruža: analogija bugarskog aforizma
+                     </p>
+                     <p class="artist-paragraph"><b>Razgovor o knjizi :</b> <br/>
+                     Nebojša Kovačevic, Dejan Vukićević
+                     </p>
+                     <div class="slideshow">
+                         <div></div>
+                         <div class="button-info">
+                             <button>Pročitaj više 
+                                 <i class="material-icons">
+                                     trending_flat
+                                     </i>
+                             </button>
+                         </div>
+                     </div>
+                 </div>
+               
+
             </div>
-            <div class="activities">
-                <img src="img/book-zorica.jpg" alt="do svidanja avgustina"/>
-                <div class="images-description">
-                    <h1>UTORAK</h1>
-                    <h2>17.Septembar 2019.
-                        <hr/>
-                    </h2>    
-                    <h3>Čitaonica Gradske biblioteke u Novom <br/>
-                    Sadu, Dunavska 1</h3>    
+            <div class="wrap">
+                <div id="slider">
+                    <div class="slide slide-one">
+                        <div class="slide-content">
+                            <h1>UTORAK</h1>
+                            <h2>17.Septembar 2019.
+                                <hr/>
+                            </h2>
+                            <h3>Čitaonica Gradske biblioteke u Novom Sadu, Dunavska 1</h3>
+                        </div>
+                    </div>
+                    <div class="slide slide-two">
+                        <div class="slide-content">
+                            <h1>SREDA</h1>
+                            <h2>26.februar.
+                                <hr/>
+                            </h2>
+                            <h3>Čitaonica Gradske biblioteke u Novom Sadu, Dunavska 1</h3>
+                        </div>
+                    </div>
+                    <div class="slide slide-three">
+                        <div class="slide-content">
+                            <h1>ČETVRTAK</h1>
+                            <h2>27.februar.
+                                <hr/>
+                            </h2>
+                            <h3>Čitaonica Gradske biblioteke u Novom Sadu, Dunavska 1</h3>
+                        </div>
+                    </div>
+                    <div class="slide slide-fore black">
+                        <div class="slide-content">
+                            <h1>UTORAK</h1>
+                            <h2>10.mart.
+                                <hr/>
+                            </h2>
+                            <h3>Čitaonica Gradske biblioteke u Novom Sadu, Dunavska 1</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -100,14 +199,18 @@
                     <h2>SVE AKTIVNOSTI
                         <hr/>
                     </h2>
+                    <div class="slider-controls-promotion">
+                        <a id="arrow-left-promotion" class="prev arrow" onclick="plusSlides(-1)">&#10094;</a>
+                        <a id="arrow-right-promotion" class="next arrow" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
                 </div>
                 <div class="next-promotion">
-                    <div class="description-next">
+                    <div class="promotion-description">
                         <h1>Predstavljanje momografije Marije Jeftimijevic Mihajlović</h1>
                         <h2>27.SEPTEMBAR</h2>
                         <p>17:00</p>
                         <h3>Knjiga Znamenja i značenja predstavlja književnost stvaranu ...</h3>
-                        <div class="more-information-next">
+                        <div class="button-wrapper">
                             <button>Više informacija 
                                 <i class="material-icons">
                                     trending_flat
@@ -118,13 +221,76 @@
                             <div></div>
                         </div>
                     </div>
+                    <div class="book-cover">
+                        <img src="img/slika_next1.jpg" alt="Marija Jeftimijevic"/>
+                    </div>
                 </div>
-                <div class="book-cover">
-                    <img src="img/slika_next1.jpg" alt="Marija Jeftimijevic"/>
+                <div class="next-promotion">
+                    <div class="promotion-description">
+                        <h1>Izložba posvećena Miroslavu Antiću</h1>
+                        <h2>11. - 13.MARTA</h2>
+                        <p>12:00</p>
+                        <h3>U okviru manifestacije će se održati niz kulturnih sadržaja i programa posvećenih M.Antiću ...</h3>
+                        <div class="button-wrapper">
+                            <button>Više informacija 
+                                <i class="material-icons">
+                                    trending_flat
+                                    </i>
+                            </button>
+                        </div>
+                        <div class="slideshow">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="book-cover">
+                        <img src="img/izlozba.jpg" alt="Marija Jeftimijevic"/>
+                    </div>
+                </div>
+                <div class="next-promotion">
+                    <div class="promotion-description">
+                        <h1>Izložba o stvaralaštvu Vladislava Petkovića Disa</h1>
+                        <h2>od 05.APRILA</h2>
+                        <p>14:00</p>
+                        <h3>U holu Gradske biblioteke biće predstavljena izložba u čast V.P.Disu...</h3>
+                        <div class="button-wrapper">
+                            <button>Više informacija 
+                                <i class="material-icons">
+                                    trending_flat
+                                    </i>
+                            </button>
+                        </div>
+                        <div class="slideshow">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="book-cover">
+                        <img src="img/izlozba_dis.jpg" alt="Marija Jeftimijevic"/>
+                    </div>
+                </div>
+                <div class="next-promotion">
+                    <div class="promotion-description">
+                        <h1>Izložba na Dan Državnosti</h1>
+                        <h2>do 19.FEBRUARA</h2>
+                        <p>08:00 - 20:00</p>
+                        <h3>U foajeu Biblioteke postavljena je izlžba koja govori o ovom značajnom istorijskom...</h3>
+                        <div class="button-wrapper">
+                            <button>Više informacija 
+                                <i class="material-icons">
+                                    trending_flat
+                                    </i>
+                            </button>
+                        </div>
+                        <div class="slideshow">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="book-cover">
+                        <img src="img/izlozba_dan_drzavnosti.jpg" alt="Marija Jeftimijevic"/>
+                    </div>
                 </div>
             </div>
             <div class="membership-information">
-                <p>Kako da .. ?</p>
+                <p>Kako da...?</p>
                 <ul>
                     <li><span>Kako da postanem član Gradske biblioteke?</span></li>
                     <li><span>Kako da poklonim knjigu Gradskoj biblioteci?</span> </li>
@@ -143,22 +309,21 @@
         </section>
 </main>
     <aside>
-        <div class="favorite-book">
+        <div class="book-lovers-headline">
             <h1>Za ljubitelje knjige</h1>
             <h2>SVI NASLOVI
                 <hr/>
             </h2>
         </div>
-        <div class="popular-books">
+       
+        <div class="books-trending">
             <a class="active" href="#">Najčitaniji naslovi</a>
             <a href="#">Nove knjige</a>
             <a href="#">Knjiga meseca</a>
             <a href="#">Prinovljeni naslovi</a>
             <a href="#">Preporuka bibliotekara</a>
         </div>
-        <!-- <div class="hr-book-right">
-            <hr/> 
-         </div> -->
+    
         <div class="most-read-titles">
             <div class="most-read-book">
                 <img src="img/moja-baka.jpg">
@@ -190,14 +355,94 @@
                 <img src="img/ubistvo-komtura.jpg"/>
                 <h1>Ubistvo komtura</h1>
                 <p>Haruki Murakami</p>
-                <h2>03</h2>
+                <h2>04</h2>
             </div>
             <div class="most-read-book">
                 <img src="img/dusanova-kletva.jpg"/>
                 <h1>Dušanova kletva</h1>
                 <p>Vanja Bulić</p>
+                <h2>05</h2>
+            </div>
+        </div>
+        <div class="most-read-titles">
+            <div class="most-read-book">
+                <img src="img/nigde_nema_te.jpg">
+                <h1>Nigde nema te</h1>
+                <p>Jelena Bačić Alimpić</p>
+                <h2>01</h2>
+            </div>
+            <div class="most-read-book">
+                <img src="img/blogdan.jpg"/>
+                <h1>Obloge od mastila</h1>
+                <p>Bogdan Stevanović</p>
+                <h2>02</h2>
+            </div>
+            <div class="one-most-read">
+                <img src="img/poslednja_zrtva.jpg"/>
+                <div class="description">
+                    <h1>TRILER</h1>
+                    <h2>Poslednja Žrtva</h2>
+                    <h3>Toni Parsons</h3>
+                    <p>Potraga za trinaestom devojkom vodi Maksa Vulfa u mračno srce sveta krijumčarenja ljudi,
+                         masovnih migracija i tržišta robova 21. veka i primorava ga da postavi pitanje koje opseda naše doba ...
+                    </p>
+                    <h4>03</h4>
+                </div>
+            </div>
+            <div class="most-read-book">
+                <img src="img/juda.jpg"/>
+                <h1>Juda</h1>
+                <p>Amos Oz</p>
                 <h2>04</h2>
             </div>
+            <div class="most-read-book">
+                <img src="img/ocemu_govorim.jpg"/>
+                <h1>O čemu govorim...</h1>
+                <p>Haruki Murakami</p>
+                <h2>05</h2>
+            </div>
+        </div>
+        <div class="most-read-titles">
+            <div class="most-read-book">
+                <img src="img/ana.jpg">
+                <h1>Ana</h1>
+                <p>Nikola Amaniti</p>
+                <h2>01</h2>
+            </div>
+            <div class="most-read-book">
+                <img src="img/blogdan.jpg"/>
+                <h1>Male uspomene</h1>
+                <p>Žoze Saramago</p>
+                <h2>02</h2>
+            </div>
+            <div class="one-most-read">
+                <img src="img/duh_pobune.jpg"/>
+                <div class="description">
+                    <h1>AUTOBIOGRAFIJA</h1>
+                    <h2>Duh pobune </h2>
+                    <h3>Luka Mičeta</h3>
+                    <p>Polazište buntovništva uvek sadrži sastojak gneva, u slučaju pisaca u ovoj knjizi i te kako opravdanog – ali sam gnev,
+                         za pobunu pronađenog smisla, svakako nije dovoljan. Samo buntovnik koji istinski...
+                    </p>
+                    <h4>03</h4>
+                </div>
+            </div>
+            <div class="most-read-book">
+                <img src="img/crveni_ban.jpg"/>
+                <h1>Pušači crvenog bana</h1>
+                <p>Svetislav Basara</p>
+                <h2>04</h2>
+            </div>
+            <div class="most-read-book">
+                <img src="img/dete.jpg"/>
+                <h1>Moje, tvoje i naše dete</h1>
+                <p>Lata Najdyel</p>
+                <h2>05</h2>
+            </div>
+        </div>
+        <div class="slider-controls-images">
+            <a id="arrow-left-book" class="prev arrow" onclick="plusSlides(-1)">&#10094;</a>
+            <a id="arrow-right-book" class="next arrow" onclick="plusSlides(1)">&#10095;</a>
         </div>
     </aside>
     <aside>
@@ -211,7 +456,8 @@
                         mladih ya kreiranje nove kulturne politike Grada. U susret otvaranja ovog centra, dragoceno nam je Vaše misljenje:   
                     </p>
                     <h3><span>* </span>Da li smatrate da postoji potreba za otvaranjem Digitalnog omladinskog centra?</h3>
-                    <!-- <label class="container"> Da
+                 
+                    <label class="container"> Da
                         <input type="radio" checked="checked" name="radio">
                         <span class="checkmark"></span>
                     </label>  
@@ -222,13 +468,13 @@
                     <label class="container">  Ne znam    
                         <input type="radio" checked="checked" name="radio">
                         <span class="checkmark"></span>
-                      </label> -->
+                      </label> 
                      <h3><span>* </span> Kakve bi sadržaje Centar trebalo da ponudi kako biste ga posetili?
                      Molimo vas da nabrojite bar tri vrste programa ili usluga za koje ste zainteresovani:</h3>
                      <input type="text"/>
                      <h3><span>* </span>Da li biste učestvovali u osmišljanju i realizaciji programa u Digitalnom
                      omladinskom centru? </h3>
-                     <!-- <label class="container"> Da
+                      <label class="container"> Da
                         <input type="radio" checked="checked" name="radio">
                         <span class="checkmark"></span>
                     </label>  
@@ -239,9 +485,9 @@
                     <label class="container">  Ne znam    
                         <input type="radio" checked="checked" name="radio">
                         <span class="checkmark"></span>
-                      </label> -->
+                      </label>
                      <h3><spna>* </spna>Kojoj starosnoj grupi pripadate?</h3>
-                     <!-- <label class="container"> 15 - 30 godina
+                      <label class="container"> 15 - 30 godina
                         <input type="radio" checked="checked" name="radio">
                         <span class="checkmark"></span>
                     </label>  
@@ -256,7 +502,7 @@
                       <label class="container"> Ne zelim da se izjasnim    
                         <input type="radio" checked="checked" name="radio">
                         <span class="checkmark"></span>
-                      </label> -->
+                      </label>
                      <h3>Vaš dodatni komentar ili predlog, ukoliko ga imate:</h3>
                     <input type="text"/>
                 </h3>
@@ -268,7 +514,7 @@
                 </button>
                 </div>
             </div>
-            <div class="associates">
+            <div class="associates-wrapper">
                 <h1>Saradnici</h1>
                 <img src="img/srpski-recnik.jpg"/>
                 <img src="img/prava-knjiga.jpg"/>
@@ -278,8 +524,8 @@
         </div>
     </aside>
     <footer>
-        <div class="mani-container">
-            <div class="information">
+        <div class="footer-wrapper">
+            <div class="footer-widget">
                 <h1>AKTUELNO</h1>
                 <p>Najčitaniji naslovi</p>
                 <p>Prikaz novih knjiga</p>
@@ -288,20 +534,20 @@
                 <p>Preporuka bibliotekara</p>
                 <p>Lice Novog Sada</p>
             </div>
-            <div class="information">
+            <div class="footer-widget">
                 <h1>INFORMACIJE</h1>
                 <p>Obaveštenja</p>
                 <p>Često postavljana pitanja</p>
                 <p>Pitajte bibliotekara</p>
             </div>
-            <div class="information">
+            <div class="footer-widget">
                 <h1>IZDAVAŠTVO</h1>
                 <p>O izdavačkoj delatnosti</p>
                 <p>Edicije</p>
                 <p>Tematske celine</p>
                 <p>Serijske publikacije</p>
             </div>
-            <div class="information">
+            <div class="footer-widget">
                 <h1>ZA BIBLIOTEKARE</h1>
                 <p>Obrazovanje</p>
                 <p>Stručni ispit</p>
@@ -310,7 +556,7 @@
                 <p>Stručna druženja</p>
                 <p>Biblioteke Južnobanatskog okruga</p>
             </div>
-            <div class="information">
+            <div class="footer-widget">
                 <h1>KONTAKT</h1>
                 <p>Dunavska 1</p>
                 <p>Uprava: 021/525-540</p>
@@ -319,7 +565,7 @@
                 <p>gradskabibliotekans@gmail.com</p>
             </div>
         </div>
-        <div class="network">
+        <div class="social-networks-wrapper">
             <p>Pratite nas: 
                 <i class="material-icons">
                     people_outline
@@ -333,6 +579,10 @@
             </p>
         </div>
     </footer>
-    
+   
+    <script src="js/slider_book.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
